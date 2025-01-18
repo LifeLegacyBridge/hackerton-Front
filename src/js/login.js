@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 alert('로그인에 성공했습니다!');
+                localStorage.setItem("login", true);
                 window.location.href = '/public/home/home.html'; // 로그인 성공 후 홈 페이지로 이동
             } else {
                 alert('서버와 통신 중 오류가 발생했습니다.');

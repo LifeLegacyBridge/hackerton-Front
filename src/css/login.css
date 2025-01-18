@@ -1,7 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
-
 * {
     margin: 0;
     padding: 0;
@@ -93,4 +92,21 @@ input:focus {
 
 .submit-button:hover {
     background-color: #888;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+#signupLink {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#signupLink:hover {
+    text-decoration: underline;
 }

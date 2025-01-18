@@ -67,3 +67,26 @@ p {
 .main-button:hover {
     background-color: #0056b3; /* hover 시 더 어두운 파란색 */
 }
+.main-button:disabled {
+    background-color: #ccc; /* 비활성화 시 회색 */
+    cursor: not-allowed;    /* 클릭 불가 표시 */
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top-color: #4a90e2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

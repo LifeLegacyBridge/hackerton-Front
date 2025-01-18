@@ -200,7 +200,7 @@ document.getElementById('sendBtn').addEventListener('click', async () => {
                     yesButton.classList.add('replay-button');
                     yesButton.textContent = '네';
                     yesButton.addEventListener('click', () => {
-                        window.location.href = `public/finish/finish.html`;
+                        window.location.href = `/public/finish/finish.html`;
                     });
 
                     responseMessages.appendChild(yesButton);

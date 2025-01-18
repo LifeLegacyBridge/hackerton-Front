@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loginContainer = document.getElementById('login-container');
 
     try {
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZjBjNDE5Y2ItOTRkMy00ZjU3LTgwOGMtMTdiZDQ2MDM3NzA4IiwiaWF0IjoxNzM3MjI4Njk3LCJleHAiOjE3MzcyMzIyOTd9.0Vw-onFXCtL3pLA53sHvJ7X1cQozUwRHp92dBTzg7Mk"
-        console.log(token);
-        if (token) {
+        const isLogin = localStorage.getItem("login");
+        console.log(isLogin);
+        if (isLogin) {
             loginContainer.innerHTML = `
                 <a href="/logout" class="logout-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed" viewBox="0 0 16 16">
