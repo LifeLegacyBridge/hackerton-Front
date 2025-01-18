@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const data = localStorage.getItem('token');
+    
     const cardContainer = document.querySelector('.card-container');
     const listModal = document.getElementById('list-modal');
     const editModal = document.getElementById('edit-modal');

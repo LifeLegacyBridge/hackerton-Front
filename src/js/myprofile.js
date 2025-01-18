@@ -5,7 +5,7 @@ let recognizing = false; // Speech recognition state
 let finalTranscript = ''; // Variable to store the final transcribed text
 let speechSynthesisUtterance; // Current speech synthesis object
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZTgwODY0ZDUtN2M3ZS00MjZlLWE2OGYtMjBhMjVkYzlhMTFlIiwiaWF0IjoxNzM3MjE5NTI1LCJleHAiOjE3MzcyMjMxMjV9.PAX33Ywc760Hb33n_w6K2znuAPPgH6Gg29QAm6PISFk';
+const token = localStorage.getItem('token');
 // Listen for the check.js completion event
 document.addEventListener('checkJsComplete', () => {
     const questionText = document.getElementById('question-title').textContent;

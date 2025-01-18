@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('form');
+    const loginForm = document.querySelector('form');   
 
     // 로그인 폼 제출 이벤트 처리
     loginForm.addEventListener('submit', async (event) => {
@@ -11,14 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // 로그인 API 호출
             const response = await fetch(
-                'https://asia-northeast3-life-legacy-dev.cloudfunctions.net/api/auth/login',
+                'http://localhost:3000/auth/login',
                 {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({ email, password }),
-                    credentials: 'include', // 쿠키 포함
                 }
             );
 
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const result = await response.json();
                 if (result.code === '200') {
                     alert('로그인에 성공했습니다!');
-                    window.location.href = '/'; // 로그인 성공 후 홈 페이지로 이동
+                    window.location.href = '/public/home/home.html'; // 로그인 성공 후 홈 페이지로 이동
                 } else {
                     alert(result.message || '로그인에 실패했습니다.');
                 }
