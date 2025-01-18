@@ -8,10 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
+        console.log(email,password);
         try {
             // 로그인 API 호출
             const response = await fetch(
-                'http://localhost:3000/auth/login',
+                'http://localhost:3000/auth/signin',
                 {
                     method: 'POST',
                     headers: {
@@ -22,16 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
             );
 
             if (response.ok) {
-                const result = await response.json();
-                if (result.code === '200') {
-                    alert('로그인에 성공했습니다!');
-                    window.location.href = '/public/home/home.html'; // 로그인 성공 후 홈 페이지로 이동
-                } else {
-                    alert(result.message || '로그인에 실패했습니다.');
-                }
+                alert('로그인에 성공했습니다!');
+                window.location.href = '/public/home/home.html'; // 로그인 성공 후 홈 페이지로 이동
             } else {
-                const error = await response.json();
-                alert(error.message || '서버와 통신 중 오류가 발생했습니다.');
+                alert('서버와 통신 중 오류가 발생했습니다.');
             }
         } catch (err) {
             console.error('로그인 요청 중 오류 발생:', err);

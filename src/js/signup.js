@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('token', JSON.stringify(result.result));
             if (response.ok) {
                 alert('회원가입이 완료되었습니다!');
-                window.location.href = '/public/login/login.html'; // 회원가입 후 로그인 페이지로 이동
+                window.location.href = '/public/home/home.html'; // 회원가입 후 로그인 페이지로 이동
             } else {
                 const result = await response.json();
                 alert(result.message || '회원가입에 실패했습니다. 다시 시도해주세요.');

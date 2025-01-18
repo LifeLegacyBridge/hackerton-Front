@@ -5,7 +5,7 @@ let recognizing = false; // Speech recognition state
 let finalTranscript = ''; // Variable to store the final transcribed text
 let speechSynthesisUtterance; // Current speech synthesis object
 
-const token = localStorage.getItem('token');
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZjBjNDE5Y2ItOTRkMy00ZjU3LTgwOGMtMTdiZDQ2MDM3NzA4IiwiaWF0IjoxNzM3MjI4Njk3LCJleHAiOjE3MzcyMzIyOTd9.0Vw-onFXCtL3pLA53sHvJ7X1cQozUwRHp92dBTzg7Mk"
 // Listen for the check.js completion event
 document.addEventListener('checkJsComplete', () => {
     const questionText = document.getElementById('question-title').textContent;
@@ -160,7 +160,7 @@ document.getElementById('sendBtn').addEventListener('click', async () => {
                 if (window.speechSynthesis.speaking) {
                     window.speechSynthesis.cancel(); // Cancel speech synthesis before redirecting
                 }
-                window.location.href = '/posts/1'; // Redirect to write page
+                window.location.href = '/public/posts/posts1.html'; // Redirect to write page
             });
 
             responseMessages.appendChild(yesButton);

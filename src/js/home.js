@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loginContainer = document.getElementById('login-container');
 
     try {
-        const token = localStorage.getItem('token');
-
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZjBjNDE5Y2ItOTRkMy00ZjU3LTgwOGMtMTdiZDQ2MDM3NzA4IiwiaWF0IjoxNzM3MjI4Njk3LCJleHAiOjE3MzcyMzIyOTd9.0Vw-onFXCtL3pLA53sHvJ7X1cQozUwRHp92dBTzg7Mk"
+        console.log(token);
         if (token) {
             loginContainer.innerHTML = `
                 <a href="/logout" class="logout-button">

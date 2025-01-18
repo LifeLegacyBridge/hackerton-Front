@@ -51,7 +51,27 @@ body {
     z-index: 10; /* Ensure it's on top */
 }
 
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 10; /* Ensure it's on top */
+}
+
 .login-button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.logout-button:hover {
     background-color: #f0f0f0;
     border-color: #bbb;
 }
